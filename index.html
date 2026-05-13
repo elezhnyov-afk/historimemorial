@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Историческая память и культурное наследие ВОВ в цифровую эпоху</title>
+    <script type="text/javascript" src="https://gc.kes.v2.scr.kaspersky-labs.com/7EA5E9BB-55E1-4C31-9C21-4943DDFED2E4/main.js?attr=C1CKU464hUKPmE6FqfqJc0q6_DfQ3WxXn2WyvED3Tx2HpSrBUjfSpBFyEcrNrKiLm_lyx4fhgTJTKPTWdZcc-7UgQp1Ff7GuYNoAdHG3Dlw_uhTFw2F-GxEPRSMnaq7C-sFb3HaRl0sEHGiV5rfxLXh7LlAoeqxhabyXZxUZWSsNFhbhBM2kU9fa0Sp1zt1Ac9KIvdZtcPN6AT2ApWb3n5k_mWaohnXv5aswgsZgy-OZkhaXkpzVpf1rauXoT3hk5-_bunFDZog0IHWIbgs2028MU6KRuQv2KUmGcp4EZF89AfrebfIFyoknGew5NEcOzpew_pZRVSTftKTqTqsDOehQHIsrhd_4_3WA1yInE5zZFf7lTbYLSTvBm0uvwmfIbtd2YgSNxIZn2R6dTNUi80ETJa24i_kVjSAzyK38t2tCLQRwGYeUqVYxkDmA7kchauFzUovDI9uJwJaumGLcMo6ZhD0CJG5mKHeelYE1a7IZ0uBWJ38kIdSTZzrrrVbZZTqHmzBf30omi22sWHZtwFyXePxdf8r6vWVGpwZCldzb_mAQFUbalZDNeDnaraaJ7gs5JUlxfsNQ-sPODltaQTWCCtxaqGHq78s4mf9E_xi_Xzw0b6e4aFihoAA8jv175gaJKTBNJPXW7APN9zM642z4hx8DmGLNet55yVDKXL5JbfOwDuQjFTYFTcCJJEgQneGJ026FPGkVtJFEggmE7QbC7vloTEEnp27ZZ9PY3jeY4vcCSAYxcZfLyx_rs0xilVl2DeNAgHx5QVTP3hoAtA7FnXp3R6rlJoyzOyn1uoiNkDsqZ1ChmKfIrekcdSJ3n1MkMzTPAZeKanX5mRhFmLQTnhpI8xRGtlcN6gDvWmTl6ib_XhKSUGpjp0x8GS07X-IskdiGZpzeF-q6rim-7NEpVnmS3cPZAmj2RM7TWM3ZPiJZ7yEGJzkTEKgBUr_1" charset="UTF-8"></script><style>
+        :root {
+            --primary: #8B0000; --primary-dark: #5C0000; --accent: #D4AF37;
+            --bg-light: #F9F9F9; --bg-dark: #1A1A1A; --text-main: #333;
+            --radius: 8px; --shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-main); 
+            background: var(--bg-light);
+            overflow-x: hidden;
+        }
+        
+        /* Анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+        
+        @keyframes rotateIn {
+            from { opacity: 0; transform: rotate(-10deg) scale(0.9); }
+            to { opacity: 1; transform: rotate(0) scale(1); }
+        }
+        
+        .animate {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        .animate-delay-1 { animation-delay: 0.1s; }
+        .animate-delay-2 { animation-delay: 0.2s; }
+        .animate-delay-3 { animation-delay: 0.3s; }
+        .animate-delay-4 { animation-delay: 0.4s; }
+        
+        img { max-width: 100%; height: auto; display: block; border-radius: var(--radius); }
+        a { text-decoration: none; color: var(--primary); transition: all 0.3s ease; }
+        a:hover { color: var(--accent); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 60px 0; }
+        h1, h2, h3 { margin-bottom: 20px; line-height: 1.2; }
+        h2 { 
+            text-align: center; 
+            font-size: 2.2rem; 
+            color: var(--primary-dark); 
+            margin-bottom: 40px; 
+            position: relative;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.6s ease;
+        }
+        h2.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        h2::after { 
+            content: ''; 
+            display: block; 
+            width: 0; 
+            height: 4px; 
+            background: var(--accent); 
+            margin: 10px auto 0;
+            transition: width 0.8s ease;
+        }
+        h2.visible::after {
+            width: 60px;
+        }
+        .btn { 
+            display: inline-block; 
+            padding: 12px 24px; 
+            background: var(--primary); 
+            color: white; 
+            border-radius: 50px; 
+            font-weight: 600; 
+            margin-top: 20px; 
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        .btn:hover { 
+            background: var(--primary-dark); 
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(139,0,0,0.4);
+        }
+        .btn:active {
+            transform: translateY(-1px);
+        }
+        
+        header { 
+            background: var(--bg-dark); 
+            color: white; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            animation: fadeInDown 0.6s ease;
+        }
+        .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        .logo { 
+            font-size: 1.4rem; 
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        nav ul { display: flex; gap: 20px; flex-wrap: wrap; }
+        nav a { 
+            color: white; 
+            padding: 5px 0; 
+            border-bottom: 2px solid transparent;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        nav a:hover { 
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+        @media (max-width: 768px) { nav ul { gap: 10px; font-size: 0.85rem; } }
+
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://upload.wikimedia.org/wikipedia/commons/3/3b/Parad_7_noyabrya_1941_goda.jpg') center/cover; 
+            color: white; 
+            text-align: center; 
+            padding: 120px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+        .hero h1 { 
+            font-size: 2.8rem; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease;
+        }
+        .hero p { 
+            font-size: 1.2rem; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.3s backwards;
+        }
+        .hero .btn {
+            animation: fadeInUp 1s ease 0.6s backwards, pulse 2s infinite 1s;
+        }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { 
+            background: white; 
+            padding: 25px; 
+            border-radius: var(--radius); 
+            box-shadow: var(--shadow); 
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .card:hover { 
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        .card h3 { 
+            color: var(--primary-dark); 
+            margin-bottom: 15px; 
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+        .card:hover h3 {
+            color: var(--accent);
+        }
+        .card img { 
+            width: 100%; 
+            height: 200px; 
+            margin-bottom: 15px; 
+            background: #f0f0f0;
+            transition: transform 0.4s ease;
+        }
+        .card:hover img {
+            transform: scale(1.05);
+        }
+        .card ul { margin-top: 10px; padding-left: 20px; list-style: disc; }
+        .card ul li { margin-bottom: 8px; transition: transform 0.2s ease; }
+        .card ul li:hover {
+            transform: translateX(5px);
+        }
+
+        .battle-card .meta { color: #666; font-size: 0.9rem; margin-bottom: 10px; }
+        .battle-card .result { 
+            background: #f4f7f6; 
+            padding: 10px; 
+            border-left: 3px solid var(--accent); 
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+        .battle-card:hover .result {
+            background: #e8f0e9;
+            border-left-width: 5px;
+        }
+        
+        .academic-box { 
+            background: white; 
+            padding: 30px; 
+            border-radius: var(--radius); 
+            box-shadow: var(--shadow); 
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.6s ease;
+        }
+        .academic-box.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .academic-box h3 { 
+            color: var(--primary); 
+            border-bottom: 2px solid #eee; 
+            padding-bottom: 10px; 
+            margin-bottom: 15px;
+        }
+        .academic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+        .academic-item { 
+            padding: 15px; 
+            background: var(--bg-light); 
+            border-radius: 6px; 
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .academic-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .academic-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .academic-item strong { display: block; margin-bottom: 5px; color: var(--primary-dark); }
+        .academic-item ul li { margin-bottom: 6px; padding-left: 15px; position: relative; }
+        .academic-item ul li::before { content: '•'; position: absolute; left: 0; color: var(--primary); }
+
+        .links-list { margin-top: 15px; }
+        .links-list a { 
+            display: block; 
+            padding: 10px 15px; 
+            background: white; 
+            border: 1px solid #ddd; 
+            margin-bottom: 8px; 
+            border-radius: 6px; 
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .links-list a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212,175,55,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .links-list a:hover::before {
+            left: 100%;
+        }
+        .links-list a:hover { 
+            border-color: var(--primary); 
+            background: #fafafa;
+            transform: translateX(5px);
+        }
+        
+        .timeline { 
+            position: relative; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding-left: 30px; 
+            border-left: 3px solid var(--accent);
+        }
+        .timeline-item { 
+            position: relative; 
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.5s ease;
+        }
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .timeline-item::before { 
+            content: ''; 
+            position: absolute; 
+            left: -37px; 
+            top: 5px; 
+            width: 14px; 
+            height: 14px; 
+            background: var(--primary); 
+            border-radius: 50%; 
+            border: 3px solid white;
+            transition: all 0.3s ease;
+        }
+        .timeline-item:hover::before {
+            transform: scale(1.5);
+            background: var(--accent);
+        }
+        .timeline-year { 
+            font-weight: bold; 
+            color: var(--primary); 
+            font-size: 1.2rem; 
+            margin-bottom: 5px;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+        .timeline-item:hover .timeline-year {
+            transform: scale(1.1);
+        }
+        
+        footer { 
+            background: var(--bg-dark); 
+            color: #aaa; 
+            text-align: center; 
+            padding: 40px 20px; 
+            font-size: 0.9rem;
+            animation: fadeIn 1s ease;
+        }
+        footer p { margin-bottom: 10px; }
+        footer a { color: var(--accent); }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            h2 { font-size: 1.8rem; }
+            section { padding: 40px 0; }
+        }
+        
+        /* Парящий эффект для декоративных элементов */
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo floating">🕊️ Историческая память</div>
+        <nav>
+            <ul>
+                <li><a href="#about">О проекте</a></li>
+                <li><a href="#battles">Сражения</a></li>
+                <li><a href="#heroes">Герои</a></li>
+                <li><a href="#memory">Память</a></li>
+                <li><a href="#museums-digital">Музеи и цифровые технологии</a></li>
+                <li><a href="#tyumen">Тюмень</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Историческая память и культурное наследие Великой Отечественной войны в цифровую эпоху</h1>
+            <p>Как цифровые технологии помогают сохранять историческую память о Великой Отечественной войне и передавать её новым поколениям</p>
+            <a href="#about" class="btn">📖 Узнать больше</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>О проекте</h2>
+            <div class="academic-box">
+                <h3>📌 Актуальность</h3>
+                <p>Сегодня молодёжь чаще получает информацию через интернет, социальные сети и цифровые технологии. В связи с этим традиционные способы представления исторической информации становятся менее эффективными для восприятия молодого поколения. Исторические события Великой Отечественной войны и тема сохранения культурного наследия требуют современных, доступных и визуально понятных форматов подачи информации.</p>
+                <br>
+                <p>Современные музеи, мультимедийные пространства и цифровые проекты всё чаще используют интерактивные технологии, визуализацию данных и цифровые ресурсы для сохранения исторической памяти и повышения интереса молодёжи к изучению истории.</p>
+                <br>
+                <p>В рамках проекта был проведён опрос среди молодёжи, который показал, что большинство участников лучше воспринимают информацию через визуальные материалы, интерактивные элементы и цифровые платформы. Результаты исследования подтвердили актуальность создания современного информационного сайта, объединяющего исторические материалы, цифровые технологии и интерактивный формат подачи информации.</p>
+                <br>
+                <p>Проект направлен на сохранение исторической памяти и культурного наследия Великой Отечественной войны через современный цифровой формат, понятный и доступный для молодого поколения.</p>
+            </div>
+
+            <div class="academic-grid">
+                <div class="academic-item"><strong>🎯 Цель проекта</strong><p>Создать современный информационный сайт с интерактивными элементами, который поможет представить историческую память и культурное наследие Великой Отечественной войны в доступном, визуально понятном и удобном для молодёжи цифровом формате.</p></div>
+                <div class="academic-item"><strong>📋 Задачи проекта</strong><ul><li>Изучить и систематизировать достоверную информацию о ключевых событиях, героях и историческом значении Великой Отечественной войны.</li><li>Разработать структуру и создать информационный сайт, использующий понятный для молодёжи визуальный и цифровой формат подачи исторической информации.</li><li>Показать современные способы сохранения исторической памяти на примере цифровых технологий, мультимедийных музейных пространств и интерактивных элементов.</li></ul></div>
+                <div class="academic-item"><strong>🔍 Объект исследования</strong><p>Историческая память и культурное наследие Великой Отечественной войны.</p></div>
+                <div class="academic-item"><strong>🔬 Предмет исследования</strong><p>Современные цифровые способы сохранения и представления исторической памяти о Великой Отечественной войне для молодёжной аудитории.</p></div>
+                <div class="academic-item"><strong>💡 Гипотеза</strong><p>Если представить историческую информацию о Великой Отечественной войне в современном цифровом и визуально понятном формате, то это поможет повысить интерес молодёжи к изучению истории и сохранению культурного наследия.</p></div>
+                <div class="academic-item"><strong>🛠️ Методы исследования</strong><ul><li>анализ исторических источников и архивных материалов;</li><li>изучение цифровых ресурсов и музейных практик;</li><li>систематизация информации;</li><li>визуализация данных с помощью инфографики;</li><li>создание интерактивных элементов;</li><li>сравнительный анализ цифровых форматов представления информации.</li></ul></div>
+                <div class="academic-item"><strong>✨ Научная новизна</strong><p>Проект объединяет исторические материалы, цифровые технологии и современные способы визуального представления информации для адаптации темы Великой Отечественной войны к восприятию молодёжной аудитории.</p></div>
+                <div class="academic-item"><strong>🌍 Практическая значимость</strong><p>Созданный сайт может использоваться как дополнительный образовательный и просветительский ресурс для школьников и молодёжи, способствующий сохранению исторической памяти и повышению интереса к культурному наследию России.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="intro" style="background: var(--bg-dark); color: white;">
+        <div class="container grid">
+            <div class="card" style="color: var(--text-main);">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Victory_Day_Parade_2019.jpg" alt="Историческая память">
+                <h3>📚 Что такое историческая память?</h3>
+                <p>Совокупность представлений общества о прошлом. Включает не только факты, но и их оценку: что считается важным, героическим или трагическим. Передаётся через образование, культуру, СМИ и личные истории.</p>
+            </div>
+            <div class="card" style="color: var(--text-main);">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Saint_Isaac%27s_Cathedral_in_SPB.jpg/640px-Saint_Isaac%27s_Cathedral_in_SPB.jpg" alt="Культурное наследие">
+                <h3>🏛️ Культурное наследие</h3>
+                <p><strong>Материальное:</strong> здания, памятники, произведения искусства.<br><strong>Нематериальное:</strong> язык, традиции, обычаи, праздники.<br>Отражает уровень развития общества и его уникальность.</p>
+            </div>
+            <div class="card" style="color: var(--text-main);">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Immortal_Regiment_Moscow_2015.jpg" alt="Почему это важно?">
+                <h3>🤔 Почему это важно?</h3>
+                <p>Сохранение истории помогает понимать своё происхождение, формирует национальную идентичность, объединяет общество и позволяет извлекать уроки из прошлого.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="battles">
+        <div class="container">
+            <h2>⚔️ Ключевые сражения</h2>
+            <div class="grid">
+                <div class="card battle-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Moscow_parade_1941.jpg" alt="Битва за Москву">
+                    <div class="meta">30.09.1941 — 20.04.1942</div>
+                    <h3>Битва за Москву</h3>
+                    <ul>
+                        <li>Первое крупное поражение вермахта</li>
+                        <li>Разрушен миф о непобедимости Германии</li>
+                        <li>Парад 7 ноября 1941 — солдаты уходили на фронт</li>
+                        <li>Контрнаступление отбросило врага на 150–300 км</li>
+                    </ul>
+                    <div class="result">💡 Итог: Сорван план «блицкрига», укреплен моральный дух армии и народа</div>
+                </div>
+                <div class="card battle-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Leningrad_under_attack.jpg" alt="Блокада Ленинграда">
+                    <div class="meta">08.09.1941 — 27.01.1944 (872 дня)</div>
+                    <h3>Блокада Ленинграда</h3>
+                    <ul>
+                        <li>2,8 млн человек в кольце блокады</li>
+                        <li>125 граммов хлеба в день</li>
+                        <li>«Дорога жизни» через Ладожское озеро</li>
+                        <li>От 600 тыс. до 1,5 млн погибших</li>
+                    </ul>
+                    <div class="result">💡 Подвиг: Город не сдался, несмотря на голод, холод и бомбежки</div>
+                </div>
+                <div class="card battle-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Mamayev_Kurgan.jpg" alt="Сталинградская битва">
+                    <div class="meta">17.07.1942 — 02.02.1943</div>
+                    <h3>Сталинградская битва</h3>
+                    <ul>
+                        <li>Бои за каждый дом, Мамаев курган</li>
+                        <li>Операция «Уран» — окружение 6-й армии</li>
+                        <li>В плену: фельдмаршал Паулюс, 91 тыс. солдат</li>
+                        <li>Разрушено 90% зданий города</li>
+                    </ul>
+                    <div class="result">💡 Перелом: Стратегическая инициатива перешла к Красной армии</div>
+                </div>
+                <div class="card battle-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/T-34_model_1943.jpg" alt="Курская битва">
+                    <div class="meta">05.07.1943 — 23.08.1943</div>
+                    <h3>Курская битва</h3>
+                    <ul>
+                        <li>Крупнейшее танковое сражение под Прохоровкой</li>
+                        <li>2 млн человек, 6 тыс. танков, 4 тыс. самолётов</li>
+                        <li>Операция «Цитадель» провалилась</li>
+                        <li>Освобождены Орёл, Белгород, Харьков</li>
+                    </ul>
+                    <div class="result">💡 Результат: Германия больше не могла проводить крупные наступления</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="heroes" style="background: var(--bg-light);">
+        <div class="container">
+            <h2>🎖️ Герои войны</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Georgy_Zhukov_-_1940s.jpg" alt="Георгий Жуков">
+                    <h3>Георгий Жуков</h3>
+                    <p class="meta">1896–1974 • Маршал СССР</p>
+                    <ul><li>Оборона Москвы</li><li>Сталинградская битва</li><li>Взятие Берлина</li></ul>
+                    <p>Один из главных стратегов Победы</p>
+                </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Konstanty_Rokossowski.jpg" alt="Константин Рокоссовский">
+                    <h3>Константин Рокоссовский</h3>
+                    <p class="meta">1896–1968 • Маршал СССР</p>
+                    <ul><li>Сталинградская битва</li><li>Операция «Багратион»</li><li>Освобождение Беларуси и Польши</li></ul>
+                    <p>Точная и продуманная стратегия</p>
+                </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Zoya_Kosmodemyanskaya.jpg" alt="Зоя Космодемьянская">
+                    <h3>Зоя Космодемьянская</h3>
+                    <p class="meta">1923–1941 • Партизанка</p>
+                    <ul><li>Диверсионная группа в тылу врага</li><li>Поджоги объектов, занятых немцами</li><li>Не выдала товарищей после ареста</li></ul>
+                    <p>Символ мужества и стойкости</p>
+                </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Alexander_Matrosov.jpg" alt="Александр Матросов">
+                    <h3>Александр Матросов</h3>
+                    <p class="meta">1924–1943 • Красноармеец</p>
+                    <ul><li>Закрыл амбразуру вражеского дзота</li><li>Обеспечил продвижение подразделения</li></ul>
+                    <p>Подвиг самопожертвования. Пример для миллионов солдат</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="memory">
+        <div class="container">
+            <h2>🗂️ Как сохраняется память</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Poklonnaya_Gora_Moscow.jpg" alt="Мемориалы">
+                    <h3>🏛️ Мемориалы и музеи</h3>
+                    <p>Поклонная гора, Мамаев курган, Брестская крепость. Центральный музей ВОВ в Москве, региональные музеи с экспонатами и личными вещами участников войны.</p>
+                </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Immortal_Regiment_Moscow_2015.jpg" alt="Праздники">
+                    <h3>🎖️ Праздники и традиции</h3>
+                    <p>День Победы (9 мая) с парадами и салютами. Акция «Бессмертный полк» — шествие с фотографиями родственников-фронтовиков.</p>
+                </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/School_children_in_Russia.jpg" alt="Образование">
+                    <h3>📚 Образование</h3>
+                    <p>Школьные программы, «Уроки мужества» с ветеранами, студенческие исследования, конференции и проекты по сохранению архивных материалов.</p>
+                </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Archive_documents.jpg" alt="Архивы">
+                    <h3>📖 Архивы</h3>
+                    <p>Проект «Без срока давности», оцифровка документов, семейные архивы — письма, фотографии, награды и воспоминания.</p>
+                </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/War_film_scene.jpg" alt="Культура">
+                    <h3>🎬 Культура и медиа</h3>
+                    <p>Фильмы «Подольские курсанты», «Великая война», документалистика, книги, мемуары и исторические исследования.</p>
+                </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Volunteers_in_Russia.jpg" alt="Общественные инициативы">
+                    <h3>🤝 Общественные инициативы</h3>
+                    <p>«Волонтёры Победы», поисковые отряды, благотворительные фонды «Память поколений», благоустройство мемориалов.</p>
+                </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Digital_archive.jpg" alt="Цифровые проекты">
+                    <h3>💻 Цифровые проекты</h3>
+                    <p>Порталы «Память народа», «Подвиг народа», виртуальные музеи, VR-туры по мемориалам, онлайн-архивы.</p>
+                </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Historical_research.jpg" alt="Актуальные вызовы">
+                    <h3>⚠️ Актуальные вызовы</h3>
+                    <p>Противодействие фальсификации истории, уход поколения ветеранов, сохранение устных свидетельств для будущих поколений.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="museums-digital" style="background: var(--bg-light);">
+        <div class="container">
+            <h2>🏛️ Музеи и цифровые технологии памяти</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🌐 Официальные цифровые архивы</h3>
+                    <p>Доступ к оцифрованным документам, наградным листам и карточкам потерь:</p>
+                    <div class="links-list">
+                        <a href="https://pamyat-naroda.ru" target="_blank">🔗 Память народа (Минобороны РФ)</a>
+                        <a href="https://podvignaroda.ru" target="_blank">🔗 Подвиг народа</a>
+                        <a href="https://obd-memorial.ru" target="_blank">🔗 ОБД Мемориал</a>
+                        <a href="https://historyrussia.org" target="_blank">🔗 Без срока давности</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>🎧 Виртуальные музеи и VR-туры</h3>
+                    <p>Интерактивные площадки, позволяющие удалённо посещать экспозиции и мемориалы:</p>
+                    <div class="links-list">
+                        <a href="https://www.culture.ru" target="_blank">🔗 Культура.РФ (Виртуальные туры)</a>
+                        <a href="https://virtual.1941-1945.ru" target="_blank">🔗 Музей Победы (Виртуальный зал)</a>
+                        <a href="https://www.museum.ru" target="_blank">🔗 Российская сеть музеев</a>
+                    </div>
+                </div>
+                <div class="card" style="grid-column: 1 / -1; background: white; border-left: 4px solid var(--primary);">
+                    <h3>📍 Тюменские музеи и цифровые инициативы</h3>
+                    <p>В Тюмени активно развиваются проекты по оцифровке истории и созданию интерактивных музейных пространств:</p>
+                    <ul style="margin-top: 15px; padding-left: 20px;">
+                        <li>Военно-исторический музей пограничных войск и ветеранов ВОВ</li>
+                        <li>Музей ВДВ (создан тюменскими десантниками)</li>
+                        <li>Выставка «Историческое оружие» (1870–1945)</li>
+                        <li>Музейная комната имени генерала И.И. Федюнинского (школа №69)</li>
+                        <li>Военно-исторический музей «Память сердца» (Лицей №34)</li>
+                        <li>Музей имени генерал-лейтенанта Д.М. Карбышева (школа №48)</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-size: 0.95rem; color: #555;">Многие из этих учреждений ведут работу по оцифровке экспонатов, созданию онлайн-экскурсий и размещению архивных материалов в открытом доступе, что напрямую поддерживает цели проекта.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tyumen">
+        <div class="container">
+            <h2>📍 Память в Тюмени</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🗿 Памятники и мемориалы</h3>
+                    <ul>
+                        <li>Мемориал «Вечный огонь» (Историческая площадь, открыт 9 мая 1968)</li>
+                        <li>Мемориальный комплекс «Площадь Памяти» (ул. Мельникайте, 111)</li>
+                        <li>Памятник учащимся школ, не вернувшимся с войны</li>
+                        <li>Памятник Николаю Кузнецову — легендарному разведчику</li>
+                        <li>Мемориал пограничникам ВОВ (ул. Береговая, 3А)</li>
+                        <li>Солдатская аллея в память тюменцев, погибших на фронтах</li>
+                    </ul>
+                </div>
+                <div class="card" style="display: flex; align-items: center; justify-content: center;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Eternal_Flame_Tyumen.jpg" alt="Вечный огонь Тюмень" style="width: 100%; max-width: 400px; margin: 0 auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" style="background: var(--bg-dark); color: white;">
+        <div class="container">
+            <h2 style="color: white;">📅 Хроника войны</h2>
+            <div class="timeline">
+                <div class="timeline-item"><div class="timeline-year">1941</div><p>Начало войны. Битва за Москву. Блокада Ленинграда. Парад 7 ноября.</p></div>
+                <div class="timeline-item"><div class="timeline-year">1942</div><p>Сталинградская битва — начало коренного перелома.</p></div>
+                <div class="timeline-item"><div class="timeline-year">1943</div><p>Курская битва. Окончательный переход инициативы к Красной армии.</p></div>
+                <div class="timeline-item"><div class="timeline-year">1945</div><p>Победа! 9 мая — Парад Победы на Красной площади.</p></div>
+                <div class="timeline-item"><div class="timeline-year">1965</div><p>День Победы объявлен государственным праздником.</p></div>
+                <div class="timeline-item"><div class="timeline-year">2015–н.в.</div><p>Цифровизация: «Память народа», «Бессмертный полк онлайн», виртуальные музеи.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sources">
+        <div class="container">
+            <h2>📚 Источники и литература</h2>
+            <div class="academic-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="academic-item">
+                    <ul>
+                        <li>Министерство культуры РФ: <a href="https://www.culture.ru" target="_blank">culture.ru</a></li>
+                        <li>Портал «Память народа»: <a href="https://pamyat-naroda.ru" target="_blank">pamyat-naroda.ru</a></li>
+                        <li>Проект «Подвиг народа»: <a href="https://podvignaroda.ru" target="_blank">podvignaroda.ru</a></li>
+                        <li>Проект «Без срока давности»: <a href="https://historyrussia.org" target="_blank">historyrussia.org</a></li>
+                        <li>Центральный музей Великой Отечественной войны: <a href="https://war.museum.by" target="_blank">war.museum.by</a></li>
+                    </ul>
+                </div>
+                <div class="academic-item">
+                    <strong>📖 Печатные и архивные источники</strong>
+                    <ul>
+                        <li>«Блокадная книга» А. Адамович, Д. Гранин</li>
+                        <li>Архивные документы РГАСПИ</li>
+                        <li>Материалы школьных и региональных музеев Тюмени</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Учебный проект «Историческая память и культурное наследие Великой Отечественной войны в цифровую эпоху»</p>
+        <p>Создано для студенческой конференции</p>
+        <p>Изображения: Wikimedia Commons | Лицензии CC BY-SA 4.0</p>
+    </div>
+</footer>
+
+<script>
+    // Анимация при прокрутке
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    // Наблюдаем за элементами
+    document.querySelectorAll('.card, .academic-item, .academic-box, .timeline-item, h2').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Плавная прокрутка для якорных ссылок
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // Эффект параллакса для hero секции
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+    });
+</script>
+
+</body>
+</html>
+
